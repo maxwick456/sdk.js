@@ -1,6 +1,6 @@
 console.log("@2024 Maximus Weichers")
 console.log("SDK.JS v0.01")
-// Create a style element and add CSS styles
+// Create a style element and add CSS styles for the intro
 const style = document.createElement('style');
 style.textContent = `
     body {
@@ -22,31 +22,29 @@ style.textContent = `
         align-items: center;
         font-size: 2em;
         opacity: 1; /* Start fully visible */
-        transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
+        transition: opacity 1s ease; /* Smooth transition for opacity */
         z-index: 10; /* Ensure it is above other content */
-    }
-
-    .content {
-        display: none; /* Hidden until intro is done */
-        padding: 20px;
-        text-align: center;
     }
 `;
 document.head.appendChild(style);
 
-// Function to hide the intro and show the main content
-function hideIntro() {
-    const intro = document.getElementById('intro');
-    const content = document.getElementById('content');
+// Create the intro element dynamically
+const intro = document.createElement('div');
+intro.className = 'intro';
+intro.id = 'intro';
+intro.textContent = "Max's Games";
+document.body.appendChild(intro);
 
-    // Set styles to trigger the sliding effect
-    intro.style.transform = 'translateY(-100%)'; // Slide out of view
+// Function to hide the intro and show the existing iframe
+function hideIntro() {
+    // Set styles to trigger the fading effect
     intro.style.opacity = '0'; // Fade out
 
-    // Wait for the animation to finish before hiding the intro and showing the content
+    // Wait for the animation to finish before hiding the intro and showing the iframe
     setTimeout(() => {
         intro.style.display = 'none'; // Hide the intro
-        content.style.display = 'block'; // Show the main content
+        const iframe = document.getElementById('frame');
+        iframe.style.display = 'block'; // Show the existing iframe
     }, 1000); // Match this duration with the CSS transition duration
 }
 
