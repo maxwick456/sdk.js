@@ -15,15 +15,19 @@ style.textContent = `
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #2196F3;
-        color: white;
+        background-color: #333; /* Change background color to #333 */
+        color: white; /* Change text color to white */
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2em;
+        font-size: 4em; /* Increase font size */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use Segoe UI font */
         opacity: 1; /* Start fully visible */
         transition: opacity 1s ease; /* Smooth transition for opacity */
         z-index: 10; /* Ensure it is above other content */
+        text-align: center; /* Center text */
+        padding: 20px; /* Add some padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
     }
 `;
 document.head.appendChild(style);
@@ -43,7 +47,7 @@ function hideIntro() {
     // Wait for the animation to finish before hiding the intro and showing the iframe
     setTimeout(() => {
         intro.style.display = 'none'; // Hide the intro
-        const iframe = document.getElementById('frame');
+        const iframe = document.getElementById('content');
         iframe.style.display = 'block'; // Show the existing iframe
     }, 1000); // Match this duration with the CSS transition duration
 }
