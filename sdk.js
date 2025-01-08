@@ -1,5 +1,8 @@
 console.log("@2024 Maximus Weichers")
 console.log("SDK.JS v0.01")
+g = document.createElement('p');
+g.setAttribute("id", "textContent");
+g.setAttribute("style", "display: none;")
 // Create a style element and add CSS styles for the intro
 // const style = document.createElement('style');
 // style.textContent = `
