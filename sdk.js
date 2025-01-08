@@ -4,7 +4,7 @@ g = document.createElement('p');
 g.setAttribute("id", "gameTitle");
 g.setAttribute("style", "display: none;")
 document.body.appendChild(g);
-iframe = document.getelementbyId("frame")
+iframe = document.getElementById("frame")
 iframe.setAttribute("allow", "fullscreen");
 
 // Create a style element and add CSS styles for the intro
