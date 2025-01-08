@@ -3,6 +3,7 @@ console.log("SDK.JS v0.01")
 g = document.createElement('p');
 g.setAttribute("id", "textContent");
 g.setAttribute("style", "display: none;")
+document.body.appendChild(g);
 // Create a style element and add CSS styles for the intro
 // const style = document.createElement('style');
 // style.textContent = `
