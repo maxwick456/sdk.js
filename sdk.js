@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Select all iframes on the page
     const iframes = document.querySelectorAll('iframe');
 
-    // Loop through each iframe and add the allowfullscreen attribute
+    // Loop through each iframe and add the allowfullscreen and allow attributes
     iframes.forEach(function(iframe) {
         iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'fullscreen'); // Allow fullscreen
     });
 });
